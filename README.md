@@ -1,7 +1,7 @@
 MadChat Frontend(ReactJs)
 ======================
 
-A Slack like application written by Python/Django
+A Slack like application written by ReactJs
 
 
 Install Dependencies
