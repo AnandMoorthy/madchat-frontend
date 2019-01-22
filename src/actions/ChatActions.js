@@ -34,6 +34,7 @@ export const getGroupList = (token) => {
 
 export const getUserChatDetails = (user, token) => {
     return (dispatch) => {
+        dispatch({ type: 'USER_SELECTED', payload: user });
         axios.get(baseURL + `/dm/${user.id}/`, {
             headers: {
               Authorization: `Bearer ${token}`
@@ -51,6 +52,7 @@ export const getUserChatDetails = (user, token) => {
 
 export const getGroupChatDetails = (group, token) => {
     return (dispatch) => {
+        dispatch({ type: 'GROUP_SELECTED', payload: group });
         axios.get(baseURL + `/group/${group.id}/`, {
             headers: {
               Authorization: `Bearer ${token}`
